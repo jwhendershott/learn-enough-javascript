@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script> 
-    alert('hello, world!');
-    console.log('hello, world!');
-    let firstName = 'Jacob';
-    console.log(firstName);
+        const daysOfTheWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+        let now = new Date();
+        let dayName = daysOfTheWeek[now.getDay()];
+        alert(`Hello, world! Happy ${dayName}!`);
     </script>
     <title>Learn Enough JavaScript</title>
 </head>
