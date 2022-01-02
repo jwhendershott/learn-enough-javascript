@@ -13,3 +13,9 @@ function imperativeUrls(elements) {
 }
 
 console.log(imperativeUrls(states));
+
+function functionalUrls(elements) {
+    return elements.map(element => element.toLowerCase().split(/\s+/).join('-'));
+}
+
+console.log(functionalUrls(states));
