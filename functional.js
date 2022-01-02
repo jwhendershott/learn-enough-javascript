@@ -26,3 +26,13 @@ function functionalUrls(elements) {
 }
 
 console.log(functionalUrls(states));
+
+// returns an array of URLs of the form "https://example.com/<urlified form>".
+
+let prefixUrl = "https://example.com/"
+
+function urlified(elements) {
+    return (elements.map(element => prefixUrl + urlify(element)));
+}
+
+console.log(urlified(states));
