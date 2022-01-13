@@ -49,3 +49,9 @@ function imperativeSingles(elements) {
     return singles;
 }
 console.log(imperativeSingles(states));
+
+// singles: functional version
+function functionalSingles(elements) {
+    return elements.filter(element => element.split(/\s+/).length === 1);
+}
+console.log(imperativeSingles(states));
