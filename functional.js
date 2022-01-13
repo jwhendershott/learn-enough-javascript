@@ -21,6 +21,7 @@ function imperativeUrls(elements) {
 
 console.log(imperativeUrls(states));
 
+// urls: Functional version
 function functionalUrls(elements) {
     return elements.map(element => urlify(element));
 }
@@ -36,3 +37,15 @@ function urlified(elements) {
 }
 
 console.log(urlified(states));
+
+// singles: Imperative version
+function imperativeSingles(elements) {
+    let singles = [];
+    elements.forEach(function(element){
+        if (element.split(/\s+/).length === 1 ){
+            singles.push(element);
+        }
+    });
+    return singles;
+}
+console.log(imperativeSingles(states));
