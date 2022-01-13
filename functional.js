@@ -1,4 +1,4 @@
-let states = ["Kansas", "Nebraska", "North Dokota", "South Dakota"];
+let states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"];
 
 // Returns a URL-friendly version of a string
 // Example: "North Dakota" -> "north-dakota"
@@ -55,3 +55,15 @@ function functionalSingles(elements) {
     return elements.filter(element => element.split(/\s+/).length === 1);
 }
 console.log(imperativeSingles(states));
+
+// Write two filter functions that return the Dakotas: one using String#includes to test for the presence 
+// of the string “Dakota” and one using a regex that tests for the length of the split array being 2.
+function filterDakota(states) {
+    return states.filter(state => state.includes("Dakota"));
+  }
+  console.log(filterDakota(states));
+
+  function filterTwoWords(states) {
+    return states.filter( state => state.split(/\s+/).length ===2);
+  }
+  console.log(filterTwoWords(states));
