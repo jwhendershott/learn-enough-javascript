@@ -81,26 +81,38 @@ function imperativeSum(elements) {
 
   console.log(imperativeSum(numbers));
 
-  function functionalSum(elements) {
-      return elements.reduce((total, n) => {return total += n; });
-  }
-  console.log(functionalSum(numbers));
+function functionalSum(elements) {
+    return elements.reduce((total, n) => {return total += n; });
+}
+console.log(functionalSum(numbers));
 
-  // lengths: imperative solution
-  function imperativeLengths(elements) {
-      let lengths = {};
-      elements.forEach(function(element) {
-          lengths[element] = element.length
-      });
-      return lengths
-  }
-  console.log(imperativeLengths(states));
+// lengths: imperative solution
+function imperativeLengths(elements) {
+    let lengths = {};
+    elements.forEach(function(element) {
+        lengths[element] = element.length
+    });
+    return lengths
+}
+console.log(imperativeLengths(states));
 
-  // lengths: functional solution
-  function functionalLengths(elements) {
+// lengths: functional solution
+function functionalLengths(elements) {
     return elements.reduce((lengths, element) => {
         lengths[element] = element.length;
         return lengths
         }, {});
 }
+console.log(functionalLengths(states));
+
+// write a function that returns the product of all the elements in an array
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function returnArray(element) {
+    return element.reduce((total, n) => total *= n);
+}
+console.log(returnArray(a));
+
+//
+function functionalLengths(elements) {return elements.reduce((lengths, element) => {lengths[element] = element.length; return lengths;}, {}); }
 console.log(functionalLengths(states));
