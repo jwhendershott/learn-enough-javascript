@@ -16,3 +16,14 @@ function Phrase(content) {
 
 }
 
+// Defines a Phrase object.
+function Phrase(content) {
+    this.content = content;
+  
+    // Makes the phrase LOUDER.
+    this.louder = function makeLouder() {
+      // FILL IN
+      let louderContent = this.content.toUpperCase();
+      return louderContent
+    };
+  }
