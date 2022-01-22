@@ -25,6 +25,15 @@ String.prototype.palindrome = function palindrome() {
     return new Phrase(this).palindrome();
 }
 
+// // Tests if string is blank
+// String.prototype.blank = function () {
+//     return !!(this.match(/^\s*$/g));
+// }
+// // returns last elements of an array
+// Array.prototype.last = function last() {
+//     return this.slice(-1);
+// }
+
 
 // Defines a Phrase object.
 // function Phrase(content) {
