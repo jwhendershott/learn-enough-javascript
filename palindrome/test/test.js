@@ -16,5 +16,8 @@ describe("Phrase", function(){
         });
 
         it("should return true for a mixed-case palindrome")
+
+        it("should return true for a palindrome with punctuation");
+        
     });
 });
