@@ -17,14 +17,7 @@ function Phrase(content) {
 
     //Returns the letters in content.
     this.letters = function letters() {
-        let theLetters = [];
-        const letterRegex = /[a-z]/i;
-        Array.from(this.content).forEach(function(character) {
-            if (character.match(letterRegex)) {
-                theLetters.push(character);
-            }
-        });
-        return theLetters.join("");
+        return Array.from(this.content).filter(c => c.match(/[a-z]/i)).join("");
     }
 
 
