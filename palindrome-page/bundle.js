@@ -6,7 +6,6 @@ function palindromeTester(event) {
         let phrase = new Phrase(event.target.phrase.value);
         let palindromeResult = document.querySelector("#palindromeResult");
 
-    
         if (phrase.palindrome()) {
         palindromeResult.innerHTML = `"${phrase.content}" is a palindrome!`;
     } else {
@@ -47,7 +46,11 @@ function Phrase(content) {
 
     // Returns true for a palindrome, false otherwise.
     this.palindrome = function palindrome() {
+    if (this.letters()) {
     return this.processedContent() === this.processedContent().reverse();
+    } else {
+        return false;
+        }
     }
 
 }
