@@ -1,0 +1,14 @@
+#!C:\Program Files\nodejs\node.exe
+
+let request = ('request');
+let Phrase = require('jwhendershott-palindrome');
+var url = require('https://cdn.learnenough.com/phrases.txt');
+
+request(url,function(error, response, body) {
+    let text = bodytext.split("\n").forEach(function(line) {
+        let phrease = new Phrase(line);
+        if (Phrase.palindrome()) {
+            console.log("palindrome detected:", line);
+        }
+    });
+});
